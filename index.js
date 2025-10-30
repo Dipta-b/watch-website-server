@@ -39,6 +39,7 @@ async function run() {
             const watch = req.body;
             const result = await watchCollection.insertOne(watch);
             res.send(result);
+            console.log(result);
         })
         // GET request to see all watches
         app.get('/watches', async (req, res) => {
